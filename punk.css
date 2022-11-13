@@ -1,0 +1,81 @@
+html {
+  --dag: tomato;
+  --natt: #030303;
+  --vind: #dbdbdb;
+}
+
+@media (color) {
+  [href] {
+    color: inherit;
+  }
+
+  .dag {
+    background: var(--dag);
+    color: var(--natt);
+  }
+
+  .natt {
+    background: var(--natt);
+    color: var(--dag);
+  }
+
+  ::selection {
+    background: var(--vind);
+    color: var(--natt);
+  }
+}
+
+html {
+  font-family: sans-serif;
+  font-size: calc(1ex + 1vw + 1vh);
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  margin: 0 1rem;
+}
+
+article {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.vocal {
+  font-size: 0;
+  line-height: 0;
+}
+
+.opener {
+  display: flex;
+  flex-flow: column;
+  font-size: 1.61rem;
+  font-weight: 600;
+  margin: 0;
+  min-height: 100vh;
+  text-align: end;
+}
+
+.line {
+  display: block;
+  margin: 1ex;
+  padding: 1em;
+  padding-block: 1ex;
+  border-radius: 2em;
+}
+
+.line:first-of-type {
+  margin-block-start: auto;
+}
+
+.line:last-of-type {
+  margin-block-end: auto;
+}
+
+.about {
+  margin: 1rem;
+  max-width: 22em;
+  line-height: 1.61;
+}
